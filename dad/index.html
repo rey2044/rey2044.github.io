@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horsepower Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 10px;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+        input {
+            margin: 10px 0;
+            padding: 10px;
+            width: calc(100% - 22px);
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .results {
+            margin-top: 20px;
+        }
+        @media (max-width: 600px) {
+            button {
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>HP to kW, kVA, and A Converter</h1>
+        <label for="hpInput">Enter Horsepower (HP):</label>
+        <input type="number" id="hpInput" placeholder="Horsepower" />
+        <button onclick="convert()">Convert</button>
+
+        <div class="results">
+            <p id="kwResult">kW: </p>
+            <p id="kvaResult">kVA: </p>
+            <p id="ampResult">A: </p>
+        </div>
+    </div>
+
+    <script>
+        function convert() {
+            const hp = parseFloat(document.getElementById('hpInput').value);
+            const voltage = 230; // Assumed voltage in volts
+            if (isNaN(hp) || hp < 0) {
+                alert("Please enter a valid horsepower value.");
+                return;
+            }
+
+            const kw = hp * 0.7457; // Conversion factor from HP to kW
+            const kva = kw / 0.8;    // Assuming power factor of 0.8 for kVA
+            const amps = kw / (voltage / 1000); // Conversion from kW to A
+
+            document.getElementById('kwResult').textContent = `kW: ${kw.toFixed(2)}`;
+            document.getElementById('kvaResult').textContent = `kVA: ${kva.toFixed(2)}`;
+            document.getElementById('ampResult').textContent = `A: ${amps.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>
