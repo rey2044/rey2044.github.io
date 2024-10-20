@@ -83,6 +83,13 @@
             document.getElementById('kvaResult').textContent = `kVA: ${kva.toFixed(2)}`;
             document.getElementById('ampResult').textContent = `A: ${amps.toFixed(2)}`;
         }
+
+        // Add event listener for Enter key
+        document.getElementById('hpInput').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                convert();
+            }
+        });
     </script>
 </body>
 </html>
