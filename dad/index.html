@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Horsepower Converter</title>
+    <link rel="icon" type="image/jpeg" href="logo.jpg"> <!-- Add favicon here -->
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -69,7 +70,7 @@
     <script>
         function convert() {
             const hp = parseFloat(document.getElementById('hpInput').value);
-            const voltage = 230; // Assumed voltage in volts
+            const voltage = 200; // Assumed voltage in volts
             if (isNaN(hp) || hp < 0) {
                 alert("Please enter a valid horsepower value.");
                 return;
