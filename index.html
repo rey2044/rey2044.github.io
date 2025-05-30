@@ -1,41 +1,1116 @@
-\<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-	  <meta charset="UTF-8">
-	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	  <link rel="shortcut icon" href="favicon.ico">
-	  <!-- google fonts -->
-	  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
-	  <!-- font-family: 'Roboto Condensed', sans-serif; -->
-	  <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;700&display=swap" rel="stylesheet">
-	  <!-- font-family: 'Oxygen', sans-serif; -->
-	  <link rel="stylesheet" type="text/css" href="style.css" >
-	  <!-- Twitter Card -->
-	  <meta name="twitter:card" content="summary_large_image">
-	  <meta name="twitter:site" content="@shihabiiuc">
-	  <meta name="twitter:creator" content="@shihabiiuc">
-	  <meta name="twitter:title"
-	    content="Your Name -Portfolio">
-	  <meta name="twitter:description"
-	    content="This is a portfolio website template that is free to download and use. You can edit this template and create your portfolio website in half an hour.">
-	  <meta name="twitter:image" content="assets/images/social-media-thumbnail.jpg">
-	  <!-- Twitter Card End -->  
-	  <!-- Linkedin & Facebook Card -->
-	  <meta property='og:title'
-	    content="Your Name -Portfolio" />
-	  <meta property='og:image' content="assets/images/social-media-thumbnail.jpg" />
-	  <meta property="og:type" content="website" /><!--  og:type is only for Facebook-->
-	  <meta property='og:description'
-	    content="This is a portfolio website template that is free to download and use. You can edit this template and create your portfolio website in half an hour." />
-	  <meta property='og:url' content="assets/images/social-media-thumbnail.jpg" />
-	  <!-- Linkedin Card End -->
-	  <title>Your Name -Portfolio</title>
-	</head>
-	<body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacke4Help - Elite Cybersecurity Solutions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-	</body>
-	<h1>Hello </h1>
-  		<script src="script.js"></script>
-	</body>
+        :root {
+            --red-team-bg: linear-gradient(135deg, #0a0a0a 0%, #1a0505 50%, #2a0a0a 100%);
+            --red-team-primary: #ff0040;
+            --red-team-secondary: #ff4066;
+            --red-team-accent: #ff8099;
+            --red-team-text: #ffffff;
+            --red-team-glass: rgba(255, 0, 64, 0.1);
+            
+            --blue-team-bg: linear-gradient(135deg, #0a0a1a 0%, #050a1a 50%, #0a0f2a 100%);
+            --blue-team-primary: #00aaff;
+            --blue-team-secondary: #4d9fff;
+            --blue-team-accent: #99ccff;
+            --blue-team-text: #ffffff;
+            --blue-team-glass: rgba(0, 170, 255, 0.1);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--red-team-bg);
+            color: var(--red-team-text);
+            overflow-x: hidden;
+            transition: all 0.5s ease;
+        }
+
+        body.blue-team {
+            background: var(--blue-team-bg);
+            color: var(--blue-team-text);
+        }
+
+        /* Animated Background */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.1;
+        }
+
+        .matrix-rain {
+            position: absolute;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            color: var(--red-team-primary);
+            animation: matrix-fall 10s linear infinite;
+        }
+
+        body.blue-team .matrix-rain {
+            color: var(--blue-team-primary);
+        }
+
+        @keyframes matrix-fall {
+            0% { transform: translateY(-100vh); opacity: 1; }
+            100% { transform: translateY(100vh); opacity: 0; }
+        }
+
+        /* Glassmorphism Components */
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+        }
+
+        .glass-red {
+            background: var(--red-team-glass);
+            border: 1px solid rgba(255, 0, 64, 0.2);
+        }
+
+        .glass-blue {
+            background: var(--blue-team-glass);
+            border: 1px solid rgba(0, 170, 255, 0.2);
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--red-team-primary);
+            text-shadow: 0 0 20px var(--red-team-primary);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        body.blue-team .logo {
+            color: var(--blue-team-primary);
+            text-shadow: 0 0 20px var(--blue-team-primary);
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 20px var(--red-team-primary); }
+            to { text-shadow: 0 0 30px var(--red-team-primary), 0 0 40px var(--red-team-primary); }
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: var(--red-team-text);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+        }
+
+        .nav-menu a:hover {
+            color: var(--red-team-primary);
+            background: var(--red-team-glass);
+            transform: translateY(-2px);
+        }
+
+        body.blue-team .nav-menu a:hover {
+            color: var(--blue-team-primary);
+            background: var(--blue-team-glass);
+        }
+
+        .theme-toggle {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .toggle-btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .red-team-btn {
+            background: var(--red-team-primary);
+            color: white;
+        }
+
+        .blue-team-btn {
+            background: var(--blue-team-primary);
+            color: white;
+        }
+
+        .toggle-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        /* Main Content */
+        main {
+            margin-top: 80px;
+        }
+
+        section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 2rem;
+            position: relative;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, var(--red-team-primary), var(--red-team-accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: slideInDown 1s ease-out;
+        }
+
+        body.blue-team .hero h1 {
+            background: linear-gradient(45deg, var(--blue-team-primary), var(--blue-team-accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            animation: slideInUp 1s ease-out 0.3s both;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(45deg, var(--red-team-primary), var(--red-team-secondary));
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            animation: slideInUp 1s ease-out 0.6s both;
+            box-shadow: 0 10px 30px rgba(255, 0, 64, 0.3);
+        }
+
+        body.blue-team .cta-button {
+            background: linear-gradient(45deg, var(--blue-team-primary), var(--blue-team-secondary));
+            box-shadow: 0 10px 30px rgba(0, 170, 255, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(255, 0, 64, 0.4);
+        }
+
+        /* 3D Cards */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .card-3d {
+            perspective: 1000px;
+            height: 300px;
+        }
+
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .card-3d:hover .card-inner {
+            transform: rotateY(10deg) rotateX(5deg);
+        }
+
+        .card-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            padding: 2rem;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .card-front {
+            background: var(--red-team-glass);
+            border: 1px solid rgba(255, 0, 64, 0.2);
+        }
+
+        body.blue-team .card-front {
+            background: var(--blue-team-glass);
+            border: 1px solid rgba(0, 170, 255, 0.2);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--red-team-primary);
+        }
+
+        body.blue-team .card-icon {
+            color: var(--blue-team-primary);
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            padding: 2rem;
+            border-radius: 15px;
+            background: var(--red-team-glass);
+            border: 1px solid rgba(255, 0, 64, 0.2);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        body.blue-team .service-card {
+            background: var(--blue-team-glass);
+            border: 1px solid rgba(0, 170, 255, 0.2);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .service-card:hover::before {
+            left: 100%;
+        }
+
+        /* Scroll Animations */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+        }
+
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0,0,0,0.8);
+            padding: 3rem 2rem 1rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: var(--red-team-primary);
+            margin-bottom: 1rem;
+        }
+
+        body.blue-team .footer-section h3 {
+            color: var(--blue-team-primary);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+
+        .mobile-menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--red-team-primary);
+            transition: all 0.3s ease;
+        }
+
+        body.blue-team .mobile-menu-toggle span {
+            background: var(--blue-team-primary);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(0,0,0,0.9);
+                flex-direction: column;
+                padding: 2rem;
+                border-radius: 0 0 20px 20px;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            section {
+                padding: 2rem 1rem;
+            }
+        }
+
+        /* Animation Keyframes */
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(0,0,0,0.1);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--red-team-primary);
+            border-radius: 4px;
+        }
+
+        body.blue-team ::-webkit-scrollbar-thumb {
+            background: var(--blue-team-primary);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            background: linear-gradient(45deg, var(--red-team-primary), var(--red-team-accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        body.blue-team .section-title {
+            background: linear-gradient(45deg, var(--blue-team-primary), var(--blue-team-accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation" id="matrixBg"></div>
+
+    <!-- Header -->
+    <header class="glass">
+        <nav>
+            <div class="logo">H4H</div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#certification">Certification</a></li>
+                <li><a href="#toolbox">Toolbox</a></li>
+                <li><a href="#hackbox">Hackbox</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#join">Join Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="theme-toggle">
+                <button class="toggle-btn red-team-btn" onclick="setTheme('red')">Red Team</button>
+                <button class="toggle-btn blue-team-btn" onclick="setTheme('blue')">Blue Team</button>
+            </div>
+            <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <h1 class="floating">Hacke4Help</h1>
+                <p>Elite Cybersecurity Solutions for the Digital Battlefield</p>
+                <a href="#contact" class="cta-button">Secure Your Future</a>
+                
+                <div class="card-grid">
+                    <div class="card-3d scroll-reveal">
+                        <div class="card-inner">
+                            <div class="card-face card-front">
+                                <div class="card-icon">🛡️</div>
+                                <h3>Defense Excellence</h3>
+                                <p>Advanced protection strategies against evolving cyber threats</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-3d scroll-reveal">
+                        <div class="card-inner">
+                            <div class="card-face card-front">
+                                <div class="card-icon">⚔️</div>
+                                <h3>Ethical Hacking</h3>
+                                <p>Professional penetration testing and vulnerability assessment</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-3d scroll-reveal">
+                        <div class="card-inner">
+                            <div class="card-face card-front">
+                                <div class="card-icon">🎯</div>
+                                <h3>Training Excellence</h3>
+                                <p>Comprehensive cybersecurity education and certification programs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="container scroll-reveal">
+                <h2 class="section-title">About Hacke4Help</h2>
+                <div class="glass-blue" style="padding: 3rem; border-radius: 20px;">
+                    <p style="font-size: 1.2rem; line-height: 1.8; text-align: center; margin-bottom: 2rem;">
+                        Founded by elite cybersecurity professionals, Hacke4Help stands at the forefront of digital defense. We bridge the gap between red team offensive tactics and blue team defensive strategies, providing comprehensive security solutions that evolve with the threat landscape.
+                    </p>
+                    <p style="font-size: 1.1rem; line-height: 1.6; text-align: center;">
+                        Our mission is to empower organizations and individuals with cutting-edge cybersecurity knowledge, tools, and services. From Fortune 500 companies to emerging startups, we deliver tailored solutions that protect what matters most.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services">
+            <div class="container">
+                <h2 class="section-title">Our Services</h2>
+                <div class="services-grid">
+                    <div class="service-card scroll-reveal">
+                        <h3 style="color: var(--red-team-primary); margin-bottom: 1rem;">🎓 Cybersecurity Training</h3>
+                        <p>Comprehensive training programs covering ethical hacking, penetration testing, digital forensics, and incident response. Our hands-on approach combines theoretical knowledge with practical skills through real-world simulations and lab environments.</p>
+                        <ul style="margin-top: 1rem; line-height: 1.6;">
+                            <li>• Certified Ethical Hacker (CEH) preparation</li>
+                            <li>• Advanced Penetration Testing courses</li>
+                            <li>• Digital Forensics and Incident Response</li>
+                            <li>• Security Operations Center (SOC) training</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card scroll-reveal">
+                        <h3 style="color: var(--red-team-primary); margin-bottom: 1rem;">📊 Risk Assessment & Compliance</h3>
+                        <p>Comprehensive security assessments to identify vulnerabilities and ensure regulatory compliance. We help organizations meet industry standards while maintaining operational efficiency and security posture.</p>
+                        <ul style="margin-top: 1rem; line-height: 1.6;">
+                            <li>• ISO 27001/27002 compliance auditing</li>
+                            <li>• NIST Cybersecurity Framework implementation</li>
+                            <li>• GDPR and data protection assessments</li>
+                            <li>• Custom risk analysis and mitigation strategies</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card scroll-reveal">
+                        <h3 style="color: var(--red-team-primary); margin-bottom: 1rem;">🔍 Penetration Testing & Ethical Hacking</h3>
+                        <p>Professional offensive security services to identify and exploit vulnerabilities before malicious actors do. Our certified ethical hackers use advanced techniques to test your defenses comprehensively.</p>
+                        <ul style="margin-top: 1rem; line-height: 1.6;">
+                            <li>• Web application penetration testing</li>
+                            <li>• Network infrastructure assessments</li>
+                            <li>• Social engineering simulations</li>
+                            <li>• Mobile application security testing</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card scroll-reveal">
+                        <h3 style="color: var(--red-team-primary); margin-bottom: 1rem;">🚨 Incident Response & Forensics</h3>
+                        <p>Rapid response services for security incidents with detailed forensic analysis. Our team helps organizations contain breaches, preserve evidence, and implement recovery strategies to minimize business impact.</p>
+                        <ul style="margin-top: 1rem; line-height: 1.6;">
+                            <li>• 24/7 incident response hotline</li>
+                            <li>• Digital forensics and evidence collection</li>
+                            <li>• Malware analysis and reverse engineering</li>
+                            <li>• Post-incident security improvements</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card scroll-reveal">
+                        <h3 style="color: var(--red-team-primary); margin-bottom: 1rem;">🖥️ Endpoint & Network Security Solutions</h3>
+                        <p>Advanced security solutions for endpoint protection and network monitoring. We deploy cutting-edge technologies to create multi-layered defense systems tailored to your organization's needs.</p>
+                        <ul style="margin-top: 1rem; line-height: 1.6;">
+                            <li>• Next-generation firewall implementation</li>
+                            <li>• Endpoint Detection and Response (EDR)</li>
+                            <li>• Security Information and Event Management (SIEM)</li>
+                            <li>• Zero-trust architecture design</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card scroll-reveal">
+                        <h3 style="color: var(--red-team-primary); margin-bottom: 1rem;">👥 Security Awareness Training</h3>
+                        <p>Human-centric security training programs to build a security-conscious culture. We transform your employees from potential vulnerabilities into your strongest line of defense against cyber threats.</p>
+                        <ul style="margin-top: 1rem; line-height: 1.6;">
+                            <li>• Phishing simulation campaigns</li>
+                            <li>• Interactive security awareness modules</li>
+                            <li>• Role-based security training programs</li>
+                            <li>• Security culture assessment and improvement</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certification Section -->
+        <section id="certification">
+            <div class="container scroll-reveal">
+                <h2 class="section-title">Certifications & Training</h2>
+                <div class="glass-blue" style="padding: 3rem; border-radius: 20px; text-align: center;">
+                    <p style="font-size: 1.2rem; margin-bottom: 2rem;">
+                        Advance your cybersecurity career with industry-recognized certifications and hands-on training programs designed by experts.
+                    </p>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                        <div style="padding: 1rem;">
+                            <h4 style="color: var(--red-team-primary);">CEH</h4>
+                            <p>Certified Ethical Hacker</p>
+                        </div>
+                        <div style="padding: 1rem;">
+                            <h4 style="color: var(--red-team-primary);">CISSP</h4>
+                            <p>Information Systems Security</p>
+                        </div>
+                        <div style="padding: 1rem;">
+                            <h4 style="color: var(--red-team-primary);">OSCP</h4>
+                            <p>Offensive Security Certified</p>
+                        </div>
+                        <div style="padding: 1rem;">
+                            <h4 style="color: var(--red-team-primary);">GCIH</h4>
+                            <p>Incident Handler Certification</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Toolbox Section -->
+        <section id="toolbox">
+            <div class="container scroll-reveal">
+                <h2 class="section-title">Security Toolbox</h2>
+                <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem;">
+                    Professional-grade tools and resources for cybersecurity professionals
+                </p>
+                <div class="card-grid">
+                    <div class="glass-blue" style="padding: 2rem; text-align: center;">
+                        <h3 style="color: var(--red-team-primary); margin-bottom: 1rem;">🔧 Penetration Testing Tools</h3>
+                        <p>Comprehensive toolkit including Metasploit, Nmap, Burp Suite, and custom exploit frameworks</p>
+                    </div>
+                    <div class="glass-blue" style="padding: 2rem; text-align: center;">
+                        <h3 style="color: var(--red-team-primary); margin-bottom: 1rem;">🛡️ Defense Utilities</h3>
+                        <p>Advanced monitoring, SIEM configuration, and incident response automation tools</p>
+                    </div>
+                    <div class="glass-blue" style="padding: 2rem; text-align: center;">
+                        <h3 style="color: var(--red-team-primary); margin-bottom: 1rem;">📱 Mobile Security</h3>
+                        <p>Android and iOS security testing frameworks and vulnerability scanners</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hackbox Section -->
+        <section id="hackbox">
+            <div class="container scroll-reveal">
+                <h2 class="section-title">HackBox Lab Environment</h2>
+                <div class="glass-blue" style="padding: 3rem; border-radius: 20px; tex-align: center;">
+                    <p style="font-size: 1.2rem; margin-bottom: 2rem; text-align: center;">
+                        Virtual lab environment with vulnerable applications, CTF challenges, and real-world scenarios for hands-on learning and skill development.
+                    </p>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                        <div>
+                            <h4 style="color: var(--red-team-primary);">🎯 Capture The Flag</h4>
+                            <p>Progressive CTF challenges from beginner to expert level</p>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--red-team-primary);">🏭 Vulnerable Applications</h4>
+                            <p>OWASP Top 10 vulnerable web applications for practice</p>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--red-team-primary);">🌐 Network Simulations</h4>
+                            <p>Complex network topologies for advanced penetration testing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products">
+            <div class="container scroll-reveal">
+                <h2 class="section-title">Security Products</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3 style="color: var(--red-team-primary);">🔐 SecureShield Pro</h3>
+                        <p>Enterprise-grade endpoint protection with AI-powered threat detection and automated response capabilities.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3 style="color: var(--red-team-primary);">📊 ThreatIntel Dashboard</h3>
+                        <p>Real-time threat intelligence platform with custom threat feeds and advanced analytics.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3 style="color: var(--red-team-primary);">🎓 CyberEd Platform</h3>
+                        <p>Interactive learning management system with gamified cybersecurity training modules.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Join Us Section -->
+        <section id="join">
+            <div class="container scroll-reveal">
+                <h2 class="section-title">Join Our Elite Team</h2>
+                <div class="glass-blue" style="padding: 3rem; border-radius: 20px; text-align: center;">
+                    <p style="font-size: 1.2rem; margin-bottom: 2rem;">
+                        Be part of the cybersecurity revolution. We're looking for passionate professionals who want to make a difference in the digital security landscape.
+                    </p>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                        <div style="text-align: left; padding: 1.5rem; background: rgba(255,255,255,0.05); border-radius: 15px;">
+                            <h4 style="color: var(--red-team-primary); margin-bottom: 1rem;">🔴 Red Team Specialists</h4>
+                            <ul style="line-height: 1.6;">
+                                <li>• Senior Penetration Testers</li>
+                                <li>• Exploit Developers</li>
+                                <li>• Social Engineering Experts</li>
+                                <li>• Red Team Operators</li>
+                            </ul>
+                        </div>
+                        <div style="text-align: left; padding: 1.5rem; background: rgba(255,255,255,0.05); border-radius: 15px;">
+                            <h4 style="color: var(--red-team-primary); margin-bottom: 1rem;">🔵 Blue Team Defenders</h4>
+                            <ul style="line-height: 1.6;">
+                                <li>• SOC Analysts</li>
+                                <li>• Incident Response Specialists</li>
+                                <li>• Threat Intelligence Analysts</li>
+                                <li>• Security Architects</li>
+                            </ul>
+                        </div>
+                        <div style="text-align: left; padding: 1.5rem; background: rgba(255,255,255,0.05); border-radius: 15px;">
+                            <h4 style="color: var(--red-team-primary); margin-bottom: 1rem;">🎓 Training & Education</h4>
+                            <ul style="line-height: 1.6;">
+                                <li>• Cybersecurity Instructors</li>
+                                <li>• Curriculum Developers</li>
+                                <li>• Technical Writers</li>
+                                <li>• Content Creators</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="#contact" class="cta-button" style="margin-top: 2rem; display: inline-block;">Apply Now</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container scroll-reveal">
+                <h2 class="section-title">Contact Us</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 3rem; align-items: start;">
+                    <div class="glass-blue" style="padding: 3rem; border-radius: 20px;">
+                        <h3 style="color: var(--red-team-primary); margin-bottom: 2rem;">Get In Touch</h3>
+                        <form id="contactForm" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                            <input type="text" placeholder="Full Name" style="padding: 1rem; border: 1px solid rgba(255,0,64,0.3); background: rgba(255,255,255,0.05); color: white; border-radius: 10px; font-size: 1rem;" required>
+                            <input type="email" placeholder="Email Address" style="padding: 1rem; border: 1px solid rgba(255,0,64,0.3); background: rgba(255,255,255,0.05); color: white; border-radius: 10px; font-size: 1rem;" required>
+                            <input type="tel" placeholder="Phone Number" style="padding: 1rem; border: 1px solid rgba(255,0,64,0.3); background: rgba(255,255,255,0.05); color: white; border-radius: 10px; font-size: 1rem;">
+                            <select style="padding: 1rem; border: 1px solid rgba(255,0,64,0.3); background: rgba(255,255,255,0.05); color: white; border-radius: 10px; font-size: 1rem;" required>
+                                <option value="">Select Service</option>
+                                <option value="training">Cybersecurity Training</option>
+                                <option value="pentest">Penetration Testing</option>
+                                <option value="compliance">Risk Assessment & Compliance</option>
+                                <option value="incident">Incident Response</option>
+                                <option value="endpoint">Endpoint Security</option>
+                                <option value="awareness">Security Awareness Training</option>
+                                <option value="consultation">General Consultation</option>
+                            </select>
+                            <textarea placeholder="Message" rows="5" style="padding: 1rem; border: 1px solid rgba(255,0,64,0.3); background: rgba(255,255,255,0.05); color: white; border-radius: 10px; font-size: 1rem; resize: vertical;" required></textarea>
+                            <button type="submit" class="cta-button" style="align-self: flex-start;">Send Message</button>
+                        </form>
+                    </div>
+                    
+                    <div>
+                        <div class="glass-blue" style="padding: 2rem; border-radius: 20px; margin-bottom: 2rem;">
+                            <h3 style="color: var(--red-team-primary); margin-bottom: 1.5rem;">Contact Information</h3>
+                            <div style="display: flex; flex-direction: column; gap: 1rem;">
+                                <div style="display: flex; align-items: center; gap: 1rem;">
+                                    <span style="font-size: 1.5rem;">📧</span>
+                                    <div>
+                                        <strong>Email:</strong><br>
+                                        info@hacke4help.com<br>
+                                        support@hacke4help.com
+                                    </div>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 1rem;">
+                                    <span style="font-size: 1.5rem;">📞</span>
+                                    <div>
+                                        <strong>Phone:</strong><br>
+                                        +1 (555) 123-HACK<br>
+                                        24/7 Emergency: +1 (555) 911-HACK
+                                    </div>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 1rem;">
+                                    <span style="font-size: 1.5rem;">🏢</span>
+                                    <div>
+                                        <strong>Address:</strong><br>
+                                        123 Cyber Security Blvd<br>
+                                        Tech District, Silicon Valley<br>
+                                        CA 94000, USA
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="glass-blue" style="padding: 2rem; border-radius: 20px;">
+                            <h3 style="color: var(--red-team-primary); margin-bottom: 1.5rem;">Follow Us</h3>
+                            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                                <a href="#" style="padding: 0.5rem 1rem; background: rgba(255,255,255,0.1); border-radius: 10px; text-decoration: none; color: white; transition: all 0.3s ease;">LinkedIn</a>
+                                <a href="#" style="padding: 0.5rem 1rem; background: rgba(255,255,255,0.1); border-radius: 10px; text-decoration: none; color: white; transition: all 0.3s ease;">Twitter</a>
+                                <a href="#" style="padding: 0.5rem 1rem; background: rgba(255,255,255,0.1); border-radius: 10px; text-decoration: none; color: white; transition: all 0.3s ease;">GitHub</a>
+                                <a href="#" style="padding: 0.5rem 1rem; background: rgba(255,255,255,0.1); border-radius: 10px; text-decoration: none; color: white; transition: all 0.3s ease;">YouTube</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul style="list-style: none; line-height: 2;">
+                    <li>Cybersecurity Training</li>
+                    <li>Penetration Testing</li>
+                    <li>Risk Assessment</li>
+                    <li>Incident Response</li>
+                    <li>Security Consulting</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul style="list-style: none; line-height: 2;">
+                    <li>Security Blog</li>
+                    <li>Threat Intelligence</li>
+                    <li>White Papers</li>
+                    <li>Case Studies</li>
+                    <li>Security Tools</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul style="list-style: none; line-height: 2;">
+                    <li>About Us</li>
+                    <li>Careers</li>
+                    <li>Partners</li>
+                    <li>Press</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul style="list-style: none; line-height: 2;">
+                    <li>Privacy Policy</li>
+                    <li>Terms of Service</li>
+                    <li>Cookie Policy</li>
+                    <li>Disclaimer</li>
+                    <li>Compliance</li>
+                </ul>
+            </div>
+        </div>
+        <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; text-align: center;">
+            <p>&copy; 2025 Hacke4Help. All rights reserved. | Securing the Digital Future</p>
+        </div>
+    </footer>
+
+    <script>
+        // Theme switching functionality
+        function setTheme(theme) {
+            const body = document.body;
+            if (theme === 'blue') {
+                body.classList.add('blue-team');
+            } else {
+                body.classList.remove('blue-team');
+            }
+            
+            // Store theme preference
+            localStorage.setItem('theme', theme);
+        }
+
+        // Load saved theme
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                setTheme(savedTheme);
+            }
+        });
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    document.getElementById('navMenu').classList.remove('active');
+                }
+            });
+        });
+
+        // Scroll reveal animation
+        function revealOnScroll() {
+            const reveals = document.querySelectorAll('.scroll-reveal');
+            reveals.forEach(reveal => {
+                const windowHeight = window.innerHeight;
+                const elementTop = reveal.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    reveal.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll(); // Check on load
+
+        // Matrix rain animation
+        function createMatrixRain() {
+            const matrixBg = document.getElementById('matrixBg');
+            const chars = '01ハッカー4ヘルプ';
+            
+            for (let i = 0; i < 50; i++) {
+                const span = document.createElement('span');
+                span.className = 'matrix-rain';
+                span.textContent = chars[Math.floor(Math.random() * chars.length)];
+                span.style.left = Math.random() * 100 + '%';
+                span.style.animationDelay = Math.random() * 10 + 's';
+                span.style.animationDuration = (Math.random() * 10 + 5) + 's';
+                matrixBg.appendChild(span);
+            }
+        }
+
+        // Initialize matrix rain
+        createMatrixRain();
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simulate form submission
+            const button = this.querySelector('button[type="submit"]');
+            const originalText = button.textContent;
+            button.textContent = 'Sending...';
+            button.disabled = true;
+            
+            setTimeout(() => {
+                button.textContent = 'Message Sent!';
+                button.style.background = 'linear-gradient(45deg, #00ff00, #00cc00)';
+                
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.disabled = false;
+                    button.style.background = '';
+                    this.reset();
+                }, 2000);
+            }, 1500);
+        });
+
+        // Header background on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(0,0,0,0.9)';
+                header.style.backdropFilter = 'blur(20px)';
+            } else {
+                header.style.background = 'rgba(255,255,255,0.05)';
+                header.style.backdropFilter = 'blur(10px)';
+            }
+        });
+
+        // Parallax effect for hero section
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            const rate = scrolled * -0.5;
+            hero.style.transform = `translateY(${rate}px)`;
+        });
+
+        // Add hover effects to service cards
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Typing effect for hero title
+        function typeWriter(element, text, speed = 100) {
+            let i = 0;
+            element.innerHTML = '';
+            
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+
+        // Initialize typing effect on load
+        window.addEventListener('load', function() {
+            const heroTitle = document.querySelector('.hero h1');
+            if (heroTitle) {
+                typeWriter(heroTitle, 'Hacke4Help', 150);
+            }
+        });
+
+        // Add intersection observer for more advanced animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and sections
+        document.querySelectorAll('.card-3d, .service-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
 </html>
+        
